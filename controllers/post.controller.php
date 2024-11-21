@@ -201,6 +201,13 @@ class PostController{
 	/*=============================================
 	Respuestas del controlador
 	=============================================*/
+	/*=============================================
+	Peticiones GET para validar contraseña 
+	=============================================*/
+	static public function getDataClave($table, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt, $endAt) {
+		$response = GetModel::getDataFilter($table, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt, $endAt);
+		return $response; 
+	}
 
 	public function fncResponse($response,$error,$suffix){
 
